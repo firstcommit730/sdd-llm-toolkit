@@ -93,7 +93,7 @@ This is a clean, modern implementation with no legacy constraints. Every aspect 
    cp -r sdd-llm-toolkit/sdd-toolkit ~/.aws/amazonq/ && \
    cd - && \
    if [ ! -d .specify ]; then \
-     rsync -av --exclude='memory/constitution.md' /tmp/sdd-llm-toolkit/.specify/ .specify/; \
+     rsync -av --exclude='memory/constitution.md' --exclude='memory/git-workflow.md' /tmp/sdd-llm-toolkit/.specify/ .specify/; \
    else \
      rsync -av --exclude='memory/' /tmp/sdd-llm-toolkit/.specify/ .specify/; \
    fi && \
@@ -111,7 +111,7 @@ This is a clean, modern implementation with no legacy constraints. Every aspect 
      cp "$file" .github/prompts/"$(basename "$file" .md).prompt.md"; \
    done && \
    if [ ! -d .specify ]; then \
-     rsync -av --exclude='memory/constitution.md' /tmp/sdd-llm-toolkit/.specify/ .specify/; \
+     rsync -av --exclude='memory/constitution.md' --exclude='memory/git-workflow.md' /tmp/sdd-llm-toolkit/.specify/ .specify/; \
    else \
      rsync -av --exclude='memory/' /tmp/sdd-llm-toolkit/.specify/ .specify/; \
    fi && \
