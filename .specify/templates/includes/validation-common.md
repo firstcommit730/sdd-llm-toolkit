@@ -10,7 +10,7 @@ This file contains common validation procedures used across multiple prompts.
 
 ### Quick Validation Process
 
-1. **Check File Exists**: Verify `.specify/memory/branching-standards.md` exists
+1. **Check File Exists**: Verify `.specify/memory/git-workflow.md` exists
 2. **Parse Rules**: Extract `allowed_type_prefixes`, `constraints`, and `length_constraints`
 3. **Validate Input**: Check input matches pattern and constraints
 4. **Report Errors**: Use standard error messages below
@@ -21,7 +21,7 @@ This file contains common validation procedures used across multiple prompts.
 
 ```
 FATAL ERROR: Branching standards file not found.
-Required file: .specify/memory/branching-standards.md
+Required file: .specify/memory/git-workflow.md
 Please initialize the constitution first.
 ```
 
@@ -29,7 +29,7 @@ Please initialize the constitution first.
 
 ```
 ERROR: Invalid branch type prefix.
-Branching Standards: .specify/memory/branching-standards.md
+Branching Standards: .specify/memory/git-workflow.md
 Required: type/short-description
 Valid prefixes: [from standards]
 Your input: [user input]

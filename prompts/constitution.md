@@ -8,13 +8,13 @@ Follow this execution flow:
 
    - If the file **does NOT exist**:
      - Copy `.specify/templates/constitution-template.md` to `.specify/memory/constitution.md`
-     - Copy `.specify/templates/branching-standards-template.md` to `.specify/memory/branching-standards.md`
-     - Inform the user that the constitution and branching standards have been initialized from the templates
+     - Copy `.specify/templates/git-workflow-template.md` to `.specify/memory/git-workflow.md`
+     - Inform the user that the constitution and git workflow standards have been initialized from the templates
      - Proceed to next step
    - If the file **exists**:
      - Load the existing constitution
-     - Check if `.specify/memory/branching-standards.md` exists
-       - If it **does NOT exist**: Copy `.specify/templates/branching-standards-template.md` to `.specify/memory/branching-standards.md`
+     - Check if `.specify/memory/git-workflow.md` exists
+       - If it **does NOT exist**: Copy `.specify/templates/git-workflow-template.md` to `.specify/memory/git-workflow.md`
      - Proceed to next step
    - Identify every placeholder token of the form `[ALL_CAPS_IDENTIFIER]`.
      **IMPORTANT**: The user might require less or more principles than the ones used in the template. If a number is specified, respect that - follow the general template. You will update the doc accordingly.

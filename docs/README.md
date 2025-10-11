@@ -330,7 +330,7 @@ Setup → Tests [P] → Core → Integration → Polish [P]
 .specify/
 ├── memory/
 │   ├── constitution.md              # Project standards
-│   └── branching-standards.md       # Branch rules
+│   └── git-workflow.md              # Branch rules
 ├── reference/                        # Optional context
 │   └── <folder-name>/
 │       ├── README.md                # Requirements

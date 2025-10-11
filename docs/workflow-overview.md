@@ -234,7 +234,7 @@ After `@implement` completes:
 .specify/
 ├── memory/
 │   ├── constitution.md           # Project constitution
-│   └── branching-standards.md    # Branch naming rules
+│   └── git-workflow.md           # Branch naming rules
 ├── reference/
 │   └── <folder-name>/           # Optional reference context
 ├── specs/

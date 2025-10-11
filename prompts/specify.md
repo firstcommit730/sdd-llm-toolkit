@@ -23,7 +23,7 @@ The user will provide a feature description and optionally a reference folder fo
 
 0. **Load and Validate Branching Standards**:
 
-   - Check `.specify/memory/branching-standards.md` exists (fatal error if missing)
+   - Check `.specify/memory/git-workflow.md` exists (fatal error if missing)
    - Parse YAML: `allowed_type_prefixes`, `constraints.must/must_not`, `length_constraints`
    - Validate user input against all rules
    - Use standard error messages from validation-common.md
@@ -34,7 +34,7 @@ The user will provide a feature description and optionally a reference folder fo
      ```
      ERROR: Branch name violates branching standards constraints.
 
-     Branching Standards Reference: .specify/memory/branching-standards.md
+     Branching Standards Reference: .specify/memory/git-workflow.md
 
      Violations found:
      [List each violated constraint with the specific rule from branching standards]
@@ -48,7 +48,7 @@ The user will provide a feature description and optionally a reference folder fo
 
      STOP all processing and do not continue.
 
-0.5. **Create a branch name**: After successfully validating against all branching rules, create a concise, descriptive name suitable for a git branch that captures the essence of the feature. This name MUST comply with ALL rules from `.specify/memory/branching-standards.md`. The script will automatically process this into a valid git branch name.
+0.5. **Create a branch name**: After successfully validating against all branching rules, create a concise, descriptive name suitable for a git branch that captures the essence of the feature. This name MUST comply with ALL rules from `.specify/memory/git-workflow.md`. The script will automatically process this into a valid git branch name.
 
 **Branching Standards Compliance Requirements**:
 
@@ -59,7 +59,7 @@ The user will provide a feature description and optionally a reference folder fo
 - Avoid all `constraints.must_not` violations from branching standards
 - Use lowercase letters, numbers, hyphens, and forward slashes only (per branching standards)
 
-**Reference**: All rules sourced from `.specify/memory/branching-standards.md`
+**Reference**: All rules sourced from `.specify/memory/git-workflow.md`
 
 1. Run the script `.specify/scripts/bash/create-new-feature.sh --json "<branch_description_with_prefix>"` from repo root and parse its JSON output for BRANCH_NAME and SPEC_FILE. All file paths must be absolute.
    **IMPORTANT** You must only ever run this script once. The JSON is provided in the terminal as output - always refer to it to get the actual content you're looking for.
@@ -77,7 +77,7 @@ The user will provide a feature description and optionally a reference folder fo
 
    - Verify the generated BRANCH_NAME still complies with branching standards rules
    - If the script's output violates any branching standards constraint, report the violation and halt
-   - Reference: `.specify/memory/branching-standards.md`
+   - Reference: `.specify/memory/git-workflow.md`
 
 1.5. **Load Reference Folder (if provided)**: If the user specified a reference folder with `-ref <folder_name>`, check for `.specify/reference/<folder_name>/` and load all files in the folder for additional context about:
 
@@ -123,7 +123,7 @@ This allows @plan and @tasks to automatically source the reference context witho
    - Coding standards alignment (Section 4: Coding Standards)
    - Testing requirements (Section 6: Testing Rules)
    - Security requirements (Section 13: Security & Privacy)
-   - Branching workflow compliance (from branching-standards.md)
+   - Branching workflow compliance (from git-workflow.md)
 
 3. Load `.specify/templates/spec-template.md` to understand required sections.
 

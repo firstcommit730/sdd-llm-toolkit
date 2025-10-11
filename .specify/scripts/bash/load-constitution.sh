@@ -16,7 +16,7 @@ load_section() {
   local file=""
   
   if [[ "$section" == "branching" ]]; then
-    file="$MEMORY_DIR/branching-standards.yaml"
+    file="$MEMORY_DIR/git-workflow.md"
   else
     file="$CONSTITUTION_DIR/$section.md"
   fi

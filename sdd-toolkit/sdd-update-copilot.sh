@@ -67,9 +67,9 @@ echo -e "${YELLOW}📂 Updating .specify directory...${NC}"
 
 # Check if .specify exists and use appropriate method
 if [ ! -d ".specify" ]; then
-    # First time install - copy everything except constitution.yaml
-    rsync -av --exclude='memory/constitution.yaml' "$TMP_DIR"/sdd-llm-toolkit/.specify/ .specify/
-    echo -e "${GREEN}  ✓ Installed .specify directory (excluded constitution.yaml)${NC}"
+    # First time install - copy everything except git-workflow.md
+    rsync -av --exclude='memory/git-workflow.md' "$TMP_DIR"/sdd-llm-toolkit/.specify/ .specify/
+    echo -e "${GREEN}  ✓ Installed .specify directory (excluded git-workflow.md)${NC}"
 else
     # Update existing - preserve memory folder using rsync
     rsync -av --exclude='memory/' "$TMP_DIR"/sdd-llm-toolkit/.specify/ .specify/
